@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lynn.smilecollege.mapper.UserInforMapper">
+    <select id="findAll" resultType="UserInfor">
+            select * from user_infor
+    </select>
+
+    <insert id="newUser" parameterType="UserInfor" >
+        insert into user_infor (infor_name,infor_password,infor_email,infor_phone) values (#{name},#{password},#{email},#{phone})
+    </insert>
+
+    <delete id="delete" parameterType="int">
+        delete from user_infor where infor_id= #{id}
+    </delete>
+
+    <select id="findById" parameterType="int" resultType="UserInfor">
+        select * from user_infor where infor_id= #{id}
+    </select>
+
+    <select id="findByName" parameterType="String" resultType="UserInfor">
+        select * from user_infor where infor_name= #{name}
+    </select>
+
+    <select id="findByPhone" parameterType="String" resultType="UserInfor">
+        select * from user_infor where infor_phone= #{phone}
+    </select>
+
+    <update id="updateUser" parameterType="UserInfor">
+        update user_infor set name=#{name} where id=#{id}
+    </update>
+
+    <update id="updateUser" parameterType="UserInfor">
+        update user_infor
+        <set>
+            infor_name=#{name}.
+            infor_password=#{password}.
+            infor_email=#{email}.
+            infor_phone=#{phone}
+        </set>
+        where memberId=#{memberId}
+    </update>
+
+</mapper>
