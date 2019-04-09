@@ -5,76 +5,77 @@ package com.lynn.smilecollege.pojo;
  */
 public class UserInfor {
 
-    private int id;
-    private String name;
-    private String password;
-    private String email;
-    private String phone;
-    private String portrait;
-    private String autograph;
-    private int topicNum;
+    private int infor_id;
+    private String infor_name;
+    private String infor_password;
+    private String infor_email;
+    private String infor_phone;
+    private String infor_portrait;
+    private String infor_autograph;
+    private int infor_topic_num;
 
-    public int getId() {
-        return id;
+    public int getInfor_id() {
+        return infor_id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setInfor_id(int infor_id) {
+        this.infor_id = infor_id;
     }
 
-    public String getName() {
-        return name;
+    public String getInfor_name() {
+        return infor_name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setInfor_name(String infor_name) {
+        this.infor_name = infor_name;
     }
 
-    public String getPassword() {
-        return password;
+    public String getInfor_password() {
+        return infor_password;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setInfor_password(String infor_password) {
+        this.infor_password = infor_password;
     }
 
-    public String getEmail() {
-        return email;
+    public String getInfor_email() {
+        return infor_email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setInfor_email(String infor_email) {
+        this.infor_email = infor_email;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getInfor_phone() {
+        return infor_phone;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setInfor_phone(String infor_phone) {
+        this.infor_phone = infor_phone;
     }
 
-    public String getPortrait() {
-        return portrait;
+    public String getInfor_portrait() {
+        return infor_portrait;
     }
 
-    public void setPortrait(String portrait) {
-        this.portrait = portrait;
+    public void setInfor_portrait(String infor_portrait) {
+        this.infor_portrait = infor_portrait;
     }
 
-    public String getAutograph() {
-        return autograph;
+    public String getInfor_autograph() {
+        return infor_autograph;
     }
 
-    public void setAutograph(String autograph) {
-        this.autograph = autograph;
+    public void setInfor_autograph(String infor_autograph) {
+        this.infor_autograph = infor_autograph;
     }
 
-    public int getTopicNum() {
-        return topicNum;
+    public int getInfor_topicNum() {
+        return infor_topic_num;
     }
 
-    public void setTopicNum(int topicNum) {
-        this.topicNum = topicNum;
+    public void setInfor_topicNum(int infor_topic_num) {
+        this.infor_topic_num = infor_topic_num;
     }
+
 }

@@ -1,6 +1,5 @@
 package com.lynn.smilecollege.mapper;
 
-import com.lynn.smilecollege.pojo.Category;
 import com.lynn.smilecollege.pojo.UserInfor;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -13,13 +12,9 @@ public interface UserInforMapper {
 
     int newUser(UserInfor userInfor);
 
-    void delete(int id);
+    void deleteById(int id);
 
-    UserInfor findById(int id);
-
-    UserInfor findByName(String name);
-
-    UserInfor findByPhone(String phone);
+    UserInfor findByCondition(UserInfor userInfor);
 
     int updateUser(UserInfor userInfor);
 }

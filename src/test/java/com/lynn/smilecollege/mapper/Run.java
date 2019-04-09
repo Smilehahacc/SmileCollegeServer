@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 //开启通用注解扫描
-//@ComponentScan(basePackages = {"com.how2java.springboot"})
-@MapperScan(basePackages = {"com.how2java.springboot"})
+//@ComponentScan(basePackages = {"com.lynn.smilecollege"})
+@MapperScan(basePackages = {"com.lynn.smilecollege"})
 //@EnableAutoConfiguration
 public class Run {
 

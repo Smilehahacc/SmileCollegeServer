@@ -8,38 +8,41 @@
     </select>
 
     <insert id="newUser" parameterType="UserInfor" >
-        insert into user_infor (infor_name,infor_password,infor_email,infor_phone) values (#{name},#{password},#{email},#{phone})
+        insert into user_infor (infor_name,infor_password,infor_email,infor_phone)
+        values (#{infor_name},#{infor_password},#{infor_email},#{infor_phone})
     </insert>
 
-    <delete id="delete" parameterType="int">
+    <delete id="deleteById" parameterType="int">
         delete from user_infor where infor_id= #{id}
     </delete>
 
-    <select id="findById" parameterType="int" resultType="UserInfor">
-        select * from user_infor where infor_id= #{id}
+    <select id="findByCondition" parameterType="UserInfor" resultType="UserInfor">
+        select * from user_infor
+        <where>
+            <if test="infor_id != 0">
+                AND infor_id = #{infor_id}
+            </if>
+            <if test="infor_name != null">
+                AND infor_name = #{infor_name}
+            </if>
+            <if test="infor_phone != null">
+                AND infor_phone = #{infor_phone}
+            </if>
+        </where>
     </select>
-
-    <select id="findByName" parameterType="String" resultType="UserInfor">
-        select * from user_infor where infor_name= #{name}
-    </select>
-
-    <select id="findByPhone" parameterType="String" resultType="UserInfor">
-        select * from user_infor where infor_phone= #{phone}
-    </select>
-
-    <update id="updateUser" parameterType="UserInfor">
-        update user_infor set name=#{name} where id=#{id}
-    </update>
 
     <update id="updateUser" parameterType="UserInfor">
         update user_infor
-        <set>
-            infor_name=#{name}.
-            infor_password=#{password}.
-            infor_email=#{email}.
-            infor_phone=#{phone}
-        </set>
-        where memberId=#{memberId}
+        <trim prefix="set" suffixOverrides=",">
+            <if test="infor_name!=null">infor_name=#{infor_name},</if>
+            <if test="infor_password!=null">infor_password=#{infor_password},</if>
+            <if test="infor_email!=null">infor_email=#{infor_email},</if>
+            <if test="infor_phone!=null">infor_phone=#{infor_phone},</if>
+            <if test="infor_portrait!=null">infor_portrait=#{infor_portrait},</if>
+            <if test="infor_autograph!=null">infor_autograph=#{infor_autograph},</if>
+            <if test="infor_topic_num!=null">infor_topic_num=#{infor_topic_num},</if>
+        </trim>
+        where infor_id=#{infor_id}
     </update>
 
 </mapper>
