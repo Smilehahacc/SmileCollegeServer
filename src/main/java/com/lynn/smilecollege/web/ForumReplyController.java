@@ -55,8 +55,8 @@ public class ForumReplyController {
      *通过reply_id回复id删除对应回复
      */
     @RequestMapping(value ="/deleteReplyByReplyId")
-    public String deleteReplyByReplyId(@RequestParam("ReplyId") int ReplyId){
-        forumReplyMapper.deleteReplyByReplyId(ReplyId);
+    public String deleteReplyByReplyId(@RequestParam("replyId") int replyId){
+        forumReplyMapper.deleteReplyByReplyId(replyId);
         return "SUCCESS";
     }
 

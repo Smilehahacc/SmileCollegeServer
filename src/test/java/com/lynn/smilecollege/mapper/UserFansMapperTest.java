@@ -42,16 +42,16 @@ public class UserFansMapperTest {
     @Test
     public void newFans() {
         UserFans u = new UserFans();
-        u.setUser_id(1);
-        u.setFans_id(2);
+        u.setUser_id(2);
+        u.setFans_id(1);
         userFansMapper.newFans(u);
         System.out.println("newFans()创建新粉丝关系--测试完成！");
     }
 
     @Test
-    public void deleteFansByUserId() {
+    public void deleteFansById() {
 //        userFansMapper.deleteFansByUserId();
-        System.out.println("deleteFansByUserId()通过关系对象删除粉丝关系--暂时不测试！");
+        System.out.println("deleteFansById()通过关系对象删除粉丝关系--暂时不测试！");
     }
 
 }

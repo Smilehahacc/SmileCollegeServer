@@ -16,7 +16,7 @@
         values (#{user_id},#{fans_id})
     </insert>
 
-    <delete id="deleteFansByFansId" parameterType="UserFans">
+    <delete id="deleteFansById" parameterType="UserFans">
         delete from user_fans where user_id=#{user_id} and fans_id=#{fans_id}
     </delete>
 

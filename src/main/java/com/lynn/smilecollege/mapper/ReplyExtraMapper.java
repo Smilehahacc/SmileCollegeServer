@@ -35,5 +35,5 @@ public interface ReplyExtraMapper {
      * @param extraId 回复的id
      * @return Result<int>
      */
-    int deleteExtraByExtraId(int extraId);
+    int deleteExtraById(int extraId);
 }

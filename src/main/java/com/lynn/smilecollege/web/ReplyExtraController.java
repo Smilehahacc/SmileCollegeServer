@@ -34,7 +34,7 @@ public class ReplyExtraController {
     /**
      *通过传入参数创建新的额外回复
      */
-    @RequestMapping(value ="/newReply")
+    @RequestMapping(value ="/newExtra")
     public String newTopic(@RequestParam("replyId") int replyId,@RequestParam("userId") int userId,
                            @RequestParam("extraContent") String extraContent,@RequestParam("extraDate") int extraDate
     ){
@@ -49,11 +49,11 @@ public class ReplyExtraController {
     }
 
     /**
-     *
+     *通过id删除额外回复
      */
-    @RequestMapping(value ="/deleteExtraByExtraId")
-    public String deleteExtraByExtraId(@RequestParam("extraId") int extraId){
-        replyExtraMapper.deleteExtraByExtraId(extraId);
+    @RequestMapping(value ="/deleteExtraById")
+    public String deleteExtraById(@RequestParam("extraId") int extraId){
+        replyExtraMapper.deleteExtraById(extraId);
         return "SUCCESS";
     }
 

@@ -80,9 +80,12 @@ public class UserInforController {
         return "SUCCESS";
     }
 
+    /**
+     *查找所有用户
+     */
     @RequestMapping(value ="/findAll")
     public List<UserInfor> getUserList(){
-        System.out.println("查询所有执行");
+        System.out.println("查询所有执行！");
         return  userInforMapper.findAll();
     }
 }

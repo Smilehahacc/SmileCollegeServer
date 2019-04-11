@@ -11,8 +11,17 @@ package com.lynn.smilecollege.pojo;
 
 public class UserFans {
 
+    private int id;
     private int user_id;
     private int fans_id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public int getUser_id() {
         return user_id;

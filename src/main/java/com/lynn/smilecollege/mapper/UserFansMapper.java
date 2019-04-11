@@ -16,29 +16,29 @@ import java.util.List;
 public interface UserFansMapper {
     /**
      * 通过用户id来查询其所对应的所有粉丝id
-     * @param userId 帖子主题的id
+     * @param userId 用户的id
      * @return Result<int>
      */
     List<UserFans> findFansByUserId(int userId);
 
     /**
      * 通过粉丝id来查询其关注的用户id
-     * @param fansId 帖子主题的id
+     * @param fansId 粉丝的id
      * @return Result<int>
      */
     List<UserFans> findUserByFansId(int fansId);
 
     /**
      * 通过粉丝对象来建立一组新的粉丝关系
-     * @param userFans 帖子主题的id
+     * @param userFans 粉丝-用户关系对象
      * @return Result<int>
      */
     int newFans(UserFans userFans);
 
     /**
      * 通过粉丝对象来删除一组对应粉丝关系
-     * @param userFans 帖子主题的id
+     * @param userFans 粉丝-用户关系对象
      * @return Result<int>
      */
-    int deleteFansByFansId(UserFans userFans);
+    int deleteFansById(UserFans userFans);
 }
