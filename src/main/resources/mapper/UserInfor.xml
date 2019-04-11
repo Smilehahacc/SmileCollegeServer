@@ -13,14 +13,14 @@
     </insert>
 
     <delete id="deleteById" parameterType="int">
-        delete from user_infor where infor_id= #{id}
+        delete from user_infor where user_id= #{id}
     </delete>
 
     <select id="findByCondition" parameterType="UserInfor" resultType="UserInfor">
         select * from user_infor
         <where>
-            <if test="infor_id != 0">
-                AND infor_id = #{infor_id}
+            <if test="user_id != 0">
+                AND user_id = #{user_id}
             </if>
             <if test="infor_name != null">
                 AND infor_name = #{infor_name}
@@ -42,7 +42,7 @@
             <if test="infor_autograph!=null">infor_autograph=#{infor_autograph},</if>
             <if test="infor_topic_num!=null">infor_topic_num=#{infor_topic_num},</if>
         </trim>
-        where infor_id=#{infor_id}
+        where user_id=#{user_id}
     </update>
 
 </mapper>

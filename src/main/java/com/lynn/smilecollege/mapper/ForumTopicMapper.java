@@ -16,10 +16,10 @@ import java.util.List;
 public interface ForumTopicMapper {
     /**
      * 通过帖子的id来查找帖子
-     * @param forumId 帖子的id
+     * @param collegeId 帖子的id
      * @return Result<List>
      */
-    List<ForumTopic> findByForumId(int forumId);
+    List<ForumTopic> findTopicByCollegeId(int collegeId);
 
     /**
      * 传入对象来创建新的帖子主题

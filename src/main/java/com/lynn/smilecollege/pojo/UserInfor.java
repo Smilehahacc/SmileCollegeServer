@@ -5,7 +5,7 @@ package com.lynn.smilecollege.pojo;
  */
 public class UserInfor {
 
-    private int infor_id;
+    private int user_id;
     private String infor_name;
     private String infor_password;
     private String infor_email;
@@ -14,12 +14,12 @@ public class UserInfor {
     private String infor_autograph;
     private int infor_topic_num;
 
-    public int getInfor_id() {
-        return infor_id;
+    public int getUser_id() {
+        return user_id;
     }
 
-    public void setInfor_id(int infor_id) {
-        this.infor_id = infor_id;
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
     }
 
     public String getInfor_name() {

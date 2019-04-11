@@ -3,13 +3,13 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.lynn.smilecollege.mapper.ForumTopicMapper">
-    <select id="findByForumId" parameterType="int" resultType="ForumTopic">
-            select * from forum_topic where forum_id=#{forumId}
+    <select id="findTopicByCollegeId" parameterType="int" resultType="ForumTopic">
+            select * from forum_topic where college_id=#{collegeId}
     </select>
 
     <insert id="newTopic" parameterType="ForumTopic" >
-        insert into forum_topic (college_id,user_id,topic_id,topic_date.topic_title,topic_content)
-        values (#{college_id},#{user_id},#{topic_id},#{topic_date},#{topic_title},#{topic_content})
+        insert into forum_topic (college_id,user_id,topic_sort,topic_date,topic_title,topic_content)
+        values (#{college_id},#{user_id},#{topic_sort},#{topic_date},#{topic_title},#{topic_content})
     </insert>
 
     <delete id="deleteByTopicId" parameterType="int">

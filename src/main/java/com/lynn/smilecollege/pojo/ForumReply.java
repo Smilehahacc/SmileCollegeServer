@@ -42,11 +42,11 @@ public class ForumReply {
         this.user_id = user_id;
     }
 
-    public String getReply_contene() {
+    public String getReply_content() {
         return reply_content;
     }
 
-    public void setReply_contene(String reply_content) {
+    public void setReply_content(String reply_content) {
         this.reply_content = reply_content;
     }
 

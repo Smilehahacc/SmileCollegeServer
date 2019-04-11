@@ -3,8 +3,8 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.lynn.smilecollege.mapper.ForumReplyMapper">
-    <select id="findByReplyId" parameterType="int" resultType="ForumReply">
-            select * from forum_reply where reply_id=#{replyId}
+    <select id="findReplyByTopicId" parameterType="int" resultType="ForumReply">
+            select * from forum_reply where topic_id=#{topicId}
     </select>
 
     <insert id="newReply" parameterType="ForumReply" >

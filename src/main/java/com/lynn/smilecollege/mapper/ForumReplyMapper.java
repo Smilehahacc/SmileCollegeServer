@@ -17,11 +17,11 @@ import java.util.List;
 public interface ForumReplyMapper {
 
     /**
-     * 通过回复的id来查找帖子
-     * @param replyId 帖子的id
+     * 通过帖子的id来查找回复
+     * @param topicId 帖子的id
      * @return Result<List>
      */
-    List<ForumReply> findByReplyId(int replyId);
+    List<ForumReply> findReplyByTopicId(int topicId);
 
     /**
      * 通过传入的对象来创建新的回复

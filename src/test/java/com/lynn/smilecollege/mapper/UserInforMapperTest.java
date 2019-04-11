@@ -56,7 +56,7 @@ public class UserInforMapperTest {
     @Test
     public void updateUser() {
         UserInfor userInfor = new UserInfor();
-        userInfor.setInfor_id(29);
+        userInfor.setUser_id(29);
         userInfor.setInfor_name("测试X");
         userInfor.setInfor_password("123456");
         userInfor.setInfor_email("66@qq.com");

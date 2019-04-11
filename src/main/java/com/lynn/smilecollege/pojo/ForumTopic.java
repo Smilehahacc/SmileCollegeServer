@@ -51,11 +51,11 @@ public class ForumTopic {
         this.topic_sort = topic_sort;
     }
 
-    public int getTopic_data() {
+    public int getTopic_date() {
         return topic_date;
     }
 
-    public void setTopic_data(int topic_date) {
+    public void setTopic_date(int topic_date) {
         this.topic_date = topic_date;
     }
 
