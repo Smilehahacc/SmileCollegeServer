@@ -44,7 +44,7 @@ public class ReplyExtraMapperTest {
 
     @Test
     public void deleteByExtraId() {
-//        forumTopicMapper.deleteByTopicId(3);
+//        forumTopicMapper.deleteExtraByExtraId(3);
         System.out.println("deleteByReplyId()通过额外回复id删除额外回复--暂时不测试！");
     }
 }

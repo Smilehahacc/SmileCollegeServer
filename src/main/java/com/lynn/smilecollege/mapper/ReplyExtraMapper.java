@@ -31,9 +31,9 @@ public interface ReplyExtraMapper {
     int newExtra(ReplyExtra replyExtra);
 
     /**
-     * 通过回复id来查询额外回复
-     * @param replyId 回复的id
+     * 通过额外回复id来删除额外回复
+     * @param extraId 回复的id
      * @return Result<int>
      */
-    int deleteByReplyId(int replyId);
+    int deleteExtraByExtraId(int extraId);
 }

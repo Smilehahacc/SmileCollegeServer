@@ -35,5 +35,5 @@ public interface ForumReplyMapper {
      * @param replyId 帖子主题的id
      * @return Result<int>
      */
-    int deleteByReplyId(int replyId);
+    int deleteReplyByReplyId(int replyId);
 }

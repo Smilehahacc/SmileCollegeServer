@@ -12,7 +12,7 @@
         values (#{topic_id},#{user_id},#{reply_content},#{reply_date},#{reply_image})
     </insert>
 
-    <delete id="deleteByReplyId" parameterType="int">
+    <delete id="deleteReplyByReplyId" parameterType="int">
         delete from forum_reply where reply_id= #{replyId}
     </delete>
 

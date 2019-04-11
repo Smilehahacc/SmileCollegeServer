@@ -20,7 +20,7 @@ public class UserInforController {
      *用户登录
      */
     @RequestMapping(value ="/login")
-    public String addUser(@RequestParam("name") String name,
+    public String login(@RequestParam("name") String name,
                           @RequestParam("password") String password
     ){
         UserInfor userInfor = new UserInfor();
@@ -41,7 +41,7 @@ public class UserInforController {
      *接收RequestBody为Json串时的请求
      */
     @RequestMapping(value ="/loginJson")
-    public String addUser(@RequestBody Map requestBody){
+    public String login(@RequestBody Map requestBody){
         UserInfor userInfor = new UserInfor();
         userInfor.setInfor_name((String)requestBody.get("name"));
         UserInfor u = userInforMapper.findByCondition(userInfor);

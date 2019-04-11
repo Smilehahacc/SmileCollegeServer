@@ -12,7 +12,7 @@
         values (#{college_id},#{user_id},#{topic_sort},#{topic_date},#{topic_title},#{topic_content})
     </insert>
 
-    <delete id="deleteByTopicId" parameterType="int">
+    <delete id="deleteTopicByTopicId" parameterType="int">
         delete from forum_topic where topic_id= #{topicId}
     </delete>
 

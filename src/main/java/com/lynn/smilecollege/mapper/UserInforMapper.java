@@ -26,7 +26,7 @@ public interface UserInforMapper {
      * @param id 用户的id
      * @return Result<int>
      */
-    int deleteById(int id);
+    int deleteUserById(int id);
 
     /**
      * 通过用户id，用户名或者用户电话来查找用户

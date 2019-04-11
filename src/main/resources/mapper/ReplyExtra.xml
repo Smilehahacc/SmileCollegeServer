@@ -12,7 +12,7 @@
         values (#{reply_id},#{user_id},#{extra_content},#{extra_date})
     </insert>
 
-    <delete id="deleteByExtraId" parameterType="int">
+    <delete id="deleteExtraByExtraId" parameterType="int">
         delete from reply_extra where extra_id= #{extraId}
     </delete>
 

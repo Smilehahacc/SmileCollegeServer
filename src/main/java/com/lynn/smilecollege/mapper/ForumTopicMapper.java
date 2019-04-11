@@ -33,6 +33,6 @@ public interface ForumTopicMapper {
      * @param topicId 帖子主题的id
      * @return Result<int>
      */
-    int deleteByTopicId(int topicId);
+    int deleteTopicByTopicId(int topicId);
 
 }
