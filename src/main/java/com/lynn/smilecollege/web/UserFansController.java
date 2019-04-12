@@ -21,30 +21,32 @@ public class UserFansController {
     UserFansMapper userFansMapper;
 
     /**
-     *通过粉丝id查询其关注的用户
-     */
-    @RequestMapping(value ="/findUserByFansId")
-    public List<UserFans> findUserByFansId(@RequestParam("fansId") int fansId
-    ){
-        List<UserFans> us = userFansMapper.findUserByFansId(fansId);
-        for(UserFans u:us) {
-            System.out.println(u.getUser_id());
-        }
-        System.out.println("findByReplyId()通过粉丝id查询其关注的用户--完成！");
-        return us;
-    }
-
-    /**
      *通过用户id查询其粉丝
      */
     @RequestMapping(value ="/findFansByUserId")
-    public List<UserFans> findFansByUserId(@RequestParam("userId") int userId
+    public List<UserFans> findFansByUserId(@RequestParam("userId") String userId
     ){
-        List<UserFans> us = userFansMapper.findFansByUserId(userId);
+        int id = Integer.parseInt(userId);
+        List<UserFans> us = userFansMapper.findFansByUserId(id);
         for(UserFans u:us) {
             System.out.println(u.getFans_id());
         }
         System.out.println("findByReplyId()通过用户id查询其粉丝--完成！");
+        return us;
+    }
+
+    /**
+     *通过粉丝id查询其关注的用户
+     */
+    @RequestMapping(value ="/findUserByFansId")
+    public List<UserFans> findUserByFansId(@RequestParam("fansId") String fansId
+    ){
+        int id = Integer.parseInt(fansId);
+        List<UserFans> us = userFansMapper.findUserByFansId(id);
+        for(UserFans u:us) {
+            System.out.println(u.getUser_id());
+        }
+        System.out.println("findByReplyId()通过粉丝id查询其关注的用户--完成！");
         return us;
     }
 

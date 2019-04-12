@@ -1,6 +1,7 @@
 package com.lynn.smilecollege.mapper;
 
 import com.lynn.smilecollege.pojo.ForumTopic;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
@@ -12,7 +13,7 @@ import java.util.List;
  * @create 2019/4/11
  * @since 1.0.0
  */
-
+@Mapper
 public interface ForumTopicMapper {
     /**
      * 通过帖子的id来查找帖子

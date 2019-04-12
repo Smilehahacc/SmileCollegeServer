@@ -1,7 +1,7 @@
 package com.lynn.smilecollege.mapper;
 
 import com.lynn.smilecollege.pojo.ForumReply;
-import com.lynn.smilecollege.pojo.ForumTopic;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
@@ -14,6 +14,7 @@ import java.util.List;
  * @since 1.0.0
  */
 
+@Mapper
 public interface ForumReplyMapper {
 
     /**

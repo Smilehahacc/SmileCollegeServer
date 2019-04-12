@@ -1,6 +1,7 @@
 package com.lynn.smilecollege.mapper;
 
 import com.lynn.smilecollege.pojo.UserFans;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
@@ -13,6 +14,7 @@ import java.util.List;
  * @since 1.0.0
  */
 
+@Mapper
 public interface UserFansMapper {
     /**
      * 通过用户id来查询其所对应的所有粉丝id

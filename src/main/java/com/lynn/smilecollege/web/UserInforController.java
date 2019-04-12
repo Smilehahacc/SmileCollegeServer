@@ -1,5 +1,6 @@
 package com.lynn.smilecollege.web;
 import com.lynn.smilecollege.mapper.UserInforMapper;
+import com.lynn.smilecollege.pojo.ForumTopic;
 import com.lynn.smilecollege.pojo.UserInfor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -78,6 +79,19 @@ public class UserInforController {
         userInfor.setInfor_phone(phone);
         userInforMapper.newUser(userInfor);
         return "SUCCESS";
+    }
+
+    /**
+     *通过用户名id来获取用户所有信息
+     */
+    @RequestMapping(value ="/findByCondition")
+    public UserInfor findByCondition(@RequestParam("name") String name
+    ){
+        UserInfor userInfor = new UserInfor();
+        userInfor.setInfor_name(name);
+        UserInfor us = userInforMapper.findByCondition(userInfor);
+        System.out.println("获取用户信息--完成！");
+        return us;
     }
 
     /**

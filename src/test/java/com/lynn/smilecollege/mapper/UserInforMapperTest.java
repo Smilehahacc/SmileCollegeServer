@@ -49,7 +49,8 @@ public class UserInforMapperTest {
     public void findByCondition() {
         UserInfor userInfor = new UserInfor();
         userInfor.setInfor_name("lynn");
-        userInforMapper.findByCondition(userInfor);
+        UserInfor us = userInforMapper.findByCondition(userInfor);
+        System.out.println(us.getInfor_phone());
         System.out.println("findByCondition()条件查询用户--测试完成！");
     }
 
