@@ -36,6 +36,7 @@ public class ReplyExtraMapperTest {
         ReplyExtra r = new ReplyExtra();
         r.setReply_id(1);
         r.setUser_id(1);
+        r.setUser_name("lynn");
         r.setExtra_content("额外回复的内容2");
         r.setExtra_date(1554955837);
         replyExtraMapper.newExtra(r);

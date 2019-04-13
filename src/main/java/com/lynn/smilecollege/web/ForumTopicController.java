@@ -39,11 +39,13 @@ public class ForumTopicController {
      */
     @RequestMapping(value ="/newTopic")
     public String newTopic(@RequestParam("collegeId") int collegeId,@RequestParam("userId") int userId,
-                           @RequestParam("topicSort") int topicSort,@RequestParam("topicTitle") String topicTitle,
-                           @RequestParam("topicContent") String topicContent,@RequestParam("topicDate") int topicDate){
+                           @RequestParam("userName") String userName,@RequestParam("topicSort") int topicSort,
+                           @RequestParam("topicTitle") String topicTitle,@RequestParam("topicContent") String topicContent,
+                           @RequestParam("topicDate") int topicDate){
         ForumTopic f = new ForumTopic();
         f.setCollege_id(collegeId);
         f.setUser_id(userId);
+        f.setUser_name(userName);
         f.setTopic_sort(topicSort);
         f.setTopic_title(topicTitle);
         f.setTopic_content(topicContent);

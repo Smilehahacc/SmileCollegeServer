@@ -38,11 +38,12 @@ public class ForumReplyController {
      */
     @RequestMapping(value ="/newReply")
     public String newTopic(@RequestParam("topicId") int topicId,@RequestParam("userId") int userId,
-                           @RequestParam("replyContent") String replyContent,@RequestParam("replyDate") int replyDate,
-                           @RequestParam("replyImage") String replyImage){
+                           @RequestParam("userName") String userName,@RequestParam("replyContent") String replyContent,
+                           @RequestParam("replyDate") int replyDate, @RequestParam("replyImage") String replyImage){
         ForumReply f = new ForumReply();
         f.setTopic_id(topicId);
         f.setUser_id(userId);
+        f.setUser_name(userName);
         f.setReply_content(replyContent);
         f.setReply_date(replyDate);
         f.setReply_image(replyImage);

@@ -14,6 +14,7 @@ public class ReplyExtra {
     private int extra_id;
     private int reply_id;
     private int user_id;
+    private String user_name;
     private String extra_content;
     private int extra_date;
 
@@ -39,6 +40,14 @@ public class ReplyExtra {
 
     public void setUser_id(int user_id) {
         this.user_id = user_id;
+    }
+
+    public String getUser_name() {
+        return user_name;
+    }
+
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
     }
 
     public String getExtra_content() {

@@ -36,6 +36,7 @@ public class ForumTopicMapperTest {
         ForumTopic f = new ForumTopic();
         f.setCollege_id(1);
         f.setUser_id(1);
+        f.setUser_name("lynn");
         f.setTopic_sort(3);
         f.setTopic_title("现在是测试的标题");
         f.setTopic_content("帖子的内容");

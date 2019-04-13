@@ -36,6 +36,7 @@ public class ForumReplyMapperTest {
         ForumReply f = new ForumReply();
         f.setTopic_id(2);
         f.setUser_id(1);
+        f.setUser_name("lynn");
         f.setReply_content("回复的内容");
         f.setReply_date(1554955837);
         f.setReply_image("");

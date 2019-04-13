@@ -36,11 +36,13 @@ public class ReplyExtraController {
      */
     @RequestMapping(value ="/newExtra")
     public String newTopic(@RequestParam("replyId") int replyId,@RequestParam("userId") int userId,
-                           @RequestParam("extraContent") String extraContent,@RequestParam("extraDate") int extraDate
+                           @RequestParam("userName") String userName,@RequestParam("extraContent") String extraContent,
+                           @RequestParam("extraDate") int extraDate
     ){
         ReplyExtra r = new ReplyExtra();
         r.setReply_id(replyId);
         r.setUser_id(userId);
+        r.setUser_name(userName);
         r.setExtra_content(extraContent);
         r.setExtra_date(extraDate);
         replyExtraMapper.newExtra(r);

@@ -8,8 +8,8 @@
     </select>
 
     <insert id="newReply" parameterType="ForumReply" >
-        insert into forum_reply (topic_id,user_id,reply_content,reply_date,reply_image)
-        values (#{topic_id},#{user_id},#{reply_content},#{reply_date},#{reply_image})
+        insert into forum_reply (topic_id,user_id,user_name,reply_content,reply_date,reply_image)
+        values (#{topic_id},#{user_id},#{user_name},#{reply_content},#{reply_date},#{reply_image})
     </insert>
 
     <delete id="deleteReplyByReplyId" parameterType="int">

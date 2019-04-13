@@ -13,6 +13,7 @@ public class ForumReply {
     private int reply_id;
     private int topic_id;
     private int user_id;
+    private String user_name;
     private String reply_content;
     private int reply_date;
     private int reply_praise;
@@ -40,6 +41,14 @@ public class ForumReply {
 
     public void setUser_id(int user_id) {
         this.user_id = user_id;
+    }
+
+    public String getUser_name() {
+        return user_name;
+    }
+
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
     }
 
     public String getReply_content() {

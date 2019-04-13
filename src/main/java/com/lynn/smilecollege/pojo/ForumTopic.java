@@ -13,6 +13,7 @@ public class ForumTopic {
     private int topic_id;
     private int college_id;
     private int user_id;
+    private String user_name;
     private int topic_sort;
     private int topic_date;
     private String topic_title;
@@ -41,6 +42,14 @@ public class ForumTopic {
 
     public void setUser_id(int user_id) {
         this.user_id = user_id;
+    }
+
+    public String getUser_name() {
+        return user_name;
+    }
+
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
     }
 
     public int getTopic_sort() {

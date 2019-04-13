@@ -8,8 +8,8 @@
     </select>
 
     <insert id="newExtra" parameterType="ReplyExtra" >
-        insert into reply_extra (reply_id,user_id,extra_content,extra_date)
-        values (#{reply_id},#{user_id},#{extra_content},#{extra_date})
+        insert into reply_extra (reply_id,user_id,user_name,extra_content,extra_date)
+        values (#{reply_id},#{user_id},#{user_name},#{extra_content},#{extra_date})
     </insert>
 
     <delete id="deleteExtraById" parameterType="int">

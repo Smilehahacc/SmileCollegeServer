@@ -14,6 +14,7 @@ public class ForumCollege {
     private int college_id;
     private String college_name;
     private String college_summary;
+    private String college_portrait;
     private int college_follow;
     private int college_topic;
 
@@ -39,6 +40,14 @@ public class ForumCollege {
 
     public void setCollege_summary(String college_summary) {
         this.college_summary = college_summary;
+    }
+
+    public String getCollege_portrait() {
+        return college_portrait;
+    }
+
+    public void setCollege_portrait(String college_portrait) {
+        this.college_portrait = college_portrait;
     }
 
     public int getCollege_follow() {

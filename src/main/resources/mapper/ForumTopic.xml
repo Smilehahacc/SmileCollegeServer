@@ -8,8 +8,8 @@
     </select>
 
     <insert id="newTopic" parameterType="ForumTopic" >
-        insert into forum_topic (college_id,user_id,topic_sort,topic_date,topic_title,topic_content)
-        values (#{college_id},#{user_id},#{topic_sort},#{topic_date},#{topic_title},#{topic_content})
+        insert into forum_topic (college_id,user_id,user_name,topic_sort,topic_date,topic_title,topic_content)
+        values (#{college_id},#{user_id},#{user_name},#{topic_sort},#{topic_date},#{topic_title},#{topic_content})
     </insert>
 
     <delete id="deleteTopicByTopicId" parameterType="int">
