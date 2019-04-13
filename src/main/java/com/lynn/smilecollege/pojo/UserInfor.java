@@ -70,11 +70,11 @@ public class UserInfor {
         this.infor_autograph = infor_autograph;
     }
 
-    public int getInfor_topicNum() {
+    public int getInfor_topic_num() {
         return infor_topic_num;
     }
 
-    public void setInfor_topicNum(int infor_topic_num) {
+    public void setInfor_topic_num(int infor_topic_num) {
         this.infor_topic_num = infor_topic_num;
     }
 

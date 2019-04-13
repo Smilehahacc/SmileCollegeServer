@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lynn.smilecollege.mapper.CollegeUserMapper">
+    <select id="findUserByCollegeId" parameterType="int" resultType="CollegeUser">
+            select * from college_user where college_id=#{collegeId}
+    </select>
+
+    <select id="findCollegeByUserId" parameterType="int" resultType="CollegeUser">
+            select * from college_user where user_id=#{userId}
+    </select>
+
+    <insert id="newUserFollow" parameterType="CollegeUser" >
+        insert into college_user (college_id,user_id)
+        values (#{college_id},#{user_id})
+    </insert>
+
+    <delete id="deleteFollowById" parameterType="CollegeUser">
+        delete from college_user where college_id=#{college_id} and user_id=#{user_id}
+    </delete>
+
+</mapper>
