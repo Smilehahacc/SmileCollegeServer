@@ -24,12 +24,32 @@ public class ForumTopicController {
     /**
      *通过college校园id来获取其所有的话题（不考虑分类，所有）
      */
-    @RequestMapping(value ="/getAllTopic")
-    public List<ForumTopic> getAllTopic(@RequestParam("collegeId") int collegeId
+    @RequestMapping(value ="/findTopicByCollegeId")
+    public List<ForumTopic> findTopicByCollegeId(@RequestParam("collegeId") String collegeId
     ){
-        List<ForumTopic> fs = forumTopicMapper.findTopicByCollegeId(collegeId);
+        int id = Integer.parseInt(collegeId);
+        List<ForumTopic> fs = forumTopicMapper.findTopicByCollegeId(id);
         for(ForumTopic f:fs) {
             System.out.println(f.getTopic_title());
+        }
+        return fs;
+    }
+
+    /**
+     *通过college校园id和分类号来获取其所有的话题
+     */
+    @RequestMapping(value ="/findTopicBySort")
+    public List<ForumTopic> getAllTopic(@RequestParam("collegeId") String collegeId,
+                                        @RequestParam("topicSort") String topicSort
+    ){
+        int id = Integer.parseInt(collegeId);
+        int sort = Integer.parseInt(topicSort);
+        ForumTopic f = new ForumTopic();
+        f.setCollege_id(id);
+        f.setTopic_sort(sort);
+        List<ForumTopic> fs = forumTopicMapper.findTopicBySort(f);
+        for(ForumTopic k:fs) {
+            System.out.println(k.getTopic_title());
         }
         return fs;
     }
@@ -38,18 +58,22 @@ public class ForumTopicController {
      *根据帖子对象创建新的帖子
      */
     @RequestMapping(value ="/newTopic")
-    public String newTopic(@RequestParam("collegeId") int collegeId,@RequestParam("userId") int userId,
-                           @RequestParam("userName") String userName,@RequestParam("topicSort") int topicSort,
+    public String newTopic(@RequestParam("collegeId") String collegeId,@RequestParam("userId") String userId,
+                           @RequestParam("userName") String userName,@RequestParam("topicSort") String topicSort,
                            @RequestParam("topicTitle") String topicTitle,@RequestParam("topicContent") String topicContent,
-                           @RequestParam("topicDate") int topicDate){
+                           @RequestParam("topicDate") String topicDate){
+        int cId = Integer.parseInt(collegeId);
+        int uId = Integer.parseInt(userId);
+        int sort = Integer.parseInt(topicSort);
+        int date = Integer.parseInt(topicDate);
         ForumTopic f = new ForumTopic();
-        f.setCollege_id(collegeId);
-        f.setUser_id(userId);
+        f.setCollege_id(cId);
+        f.setUser_id(uId);
         f.setUser_name(userName);
-        f.setTopic_sort(topicSort);
+        f.setTopic_sort(sort);
         f.setTopic_title(topicTitle);
         f.setTopic_content(topicContent);
-        f.setTopic_date(topicDate);
+        f.setTopic_date(date);
         forumTopicMapper.newTopic(f);
         System.out.println("newTopic()创建新的帖子--完成！");
         return "SUCCESS";

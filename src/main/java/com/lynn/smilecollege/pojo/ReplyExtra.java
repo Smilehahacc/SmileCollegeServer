@@ -15,6 +15,7 @@ public class ReplyExtra {
     private int reply_id;
     private int user_id;
     private String user_name;
+    private String user_portrait;
     private String extra_content;
     private int extra_date;
 
@@ -48,6 +49,14 @@ public class ReplyExtra {
 
     public void setUser_name(String user_name) {
         this.user_name = user_name;
+    }
+
+    public String getUser_portrait() {
+        return user_portrait;
+    }
+
+    public void setUser_portrait(String user_portrait) {
+        this.user_portrait = user_portrait;
     }
 
     public String getExtra_content() {

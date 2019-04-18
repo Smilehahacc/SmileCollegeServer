@@ -14,6 +14,7 @@ public class ForumReply {
     private int topic_id;
     private int user_id;
     private String user_name;
+    private String user_portrait;
     private String reply_content;
     private int reply_date;
     private int reply_praise;
@@ -49,6 +50,14 @@ public class ForumReply {
 
     public void setUser_name(String user_name) {
         this.user_name = user_name;
+    }
+
+    public String getUser_portrait() {
+        return user_portrait;
+    }
+
+    public void setUser_portrait(String user_portrait) {
+        this.user_portrait = user_portrait;
     }
 
     public String getReply_content() {

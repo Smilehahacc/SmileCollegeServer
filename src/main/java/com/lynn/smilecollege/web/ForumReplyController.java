@@ -23,9 +23,9 @@ public class ForumReplyController {
      *通过帖子id查询下面的所有回复
      */
     @RequestMapping(value ="/findReplyByTopicId")
-    public List<ForumReply> findReplyByTopicId(@RequestParam("collegeId") int collegeId
+    public List<ForumReply> findReplyByTopicId(@RequestParam("topicId") int topicId
     ){
-        List<ForumReply> fs = forumReplyMapper.findReplyByTopicId(1);
+        List<ForumReply> fs = forumReplyMapper.findReplyByTopicId(topicId);
         for(ForumReply f:fs) {
             System.out.println(f.getReply_content());
         }
@@ -37,15 +37,18 @@ public class ForumReplyController {
      *通过对象，创建对应帖子底下的回复
      */
     @RequestMapping(value ="/newReply")
-    public String newTopic(@RequestParam("topicId") int topicId,@RequestParam("userId") int userId,
+    public String newTopic(@RequestParam("topicId") String topicId,@RequestParam("userId") String userId,
                            @RequestParam("userName") String userName,@RequestParam("replyContent") String replyContent,
-                           @RequestParam("replyDate") int replyDate, @RequestParam("replyImage") String replyImage){
+                           @RequestParam("replyDate") String replyDate, @RequestParam("replyImage") String replyImage){
+        int cId = Integer.parseInt(topicId);
+        int uId = Integer.parseInt(userId);
+        int date = Integer.parseInt(replyDate);
         ForumReply f = new ForumReply();
-        f.setTopic_id(topicId);
-        f.setUser_id(userId);
+        f.setTopic_id(cId);
+        f.setUser_id(uId);
         f.setUser_name(userName);
         f.setReply_content(replyContent);
-        f.setReply_date(replyDate);
+        f.setReply_date(date);
         f.setReply_image(replyImage);
         forumReplyMapper.newReply(f);
         System.out.println("newReply()创建新的回复--完成！");

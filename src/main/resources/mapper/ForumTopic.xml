@@ -7,6 +7,10 @@
             select * from forum_topic where college_id=#{collegeId}
     </select>
 
+    <select id="findTopicBySort" parameterType="ForumTopic" resultType="ForumTopic">
+            select * from forum_topic where college_id=#{college_id} and topic_sort=#{topic_sort}
+    </select>
+
     <insert id="newTopic" parameterType="ForumTopic" >
         insert into forum_topic (college_id,user_id,user_name,topic_sort,topic_date,topic_title,topic_content)
         values (#{college_id},#{user_id},#{user_name},#{topic_sort},#{topic_date},#{topic_title},#{topic_content})

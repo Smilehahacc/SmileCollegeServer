@@ -1,10 +1,11 @@
 package com.lynn.smilecollege.web;
 import com.lynn.smilecollege.mapper.UserInforMapper;
-import com.lynn.smilecollege.pojo.ForumTopic;
 import com.lynn.smilecollege.pojo.UserInfor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.Map;
@@ -102,4 +103,6 @@ public class UserInforController {
         System.out.println("查询所有执行！");
         return  userInforMapper.findAll();
     }
+
+
 }

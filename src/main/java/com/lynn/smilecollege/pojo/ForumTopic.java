@@ -14,6 +14,7 @@ public class ForumTopic {
     private int college_id;
     private int user_id;
     private String user_name;
+    private String user_portrait;
     private int topic_sort;
     private int topic_date;
     private String topic_title;
@@ -50,6 +51,14 @@ public class ForumTopic {
 
     public void setUser_name(String user_name) {
         this.user_name = user_name;
+    }
+
+    public String getUser_portrait() {
+        return user_portrait;
+    }
+
+    public void setUser_portrait(String user_portrait) {
+        this.user_portrait = user_portrait;
     }
 
     public int getTopic_sort() {

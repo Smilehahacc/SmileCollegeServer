@@ -22,6 +22,14 @@ public interface ForumTopicMapper {
      */
     List<ForumTopic> findTopicByCollegeId(int collegeId);
 
+
+    /**
+     * 通过帖子的id和分类来查找帖子
+     * @param forumTopic 帖子的对象
+     * @return Result<List>
+     */
+    List<ForumTopic> findTopicBySort(ForumTopic forumTopic);
+
     /**
      * 传入对象来创建新的帖子主题
      * @param forumTopic 帖子的对象
